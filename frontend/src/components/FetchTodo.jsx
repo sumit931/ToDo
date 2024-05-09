@@ -37,12 +37,15 @@ function FetchTodo({shouldUpdate}) {
     return (
         <div>
             {todos.map(todo => (
-                <div key={todo._id} className="todo-item">
+                <div key={todo._id} className="todo-item" >
+                    <div style={{display: 'inline-block',backgroundColor:'yellow'}} >
                     <div className="todo-content">
                         <h3 className="todo-title">{todo.title}</h3>
                         <p className="todo-description">{todo.description}</p>
+                        <p classname = "status" >Task Incompleted</p>
                     </div>
                     <button className="remove-button" onClick={() => removeTodo(todo._id)}>Remove</button>
+                    </div>
                 </div>
             ))}
         </div>

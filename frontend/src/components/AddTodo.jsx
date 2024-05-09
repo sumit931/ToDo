@@ -52,7 +52,9 @@ function AddTodo({onUpdate}) {
           value = {input2}
           onChange={(e)=>setInput2(e.target.value)}
         />
-        <button type ='submit'>Add</button>
+        <button type='submit' style={{ marginLeft: '20px' }}>Add</button>
+
+        {/* <button type ='submit' style={{marginLeft = '20px'}}>Add</button> */}
     </form>
     {/* <FetchTodo/> */}
     </>
