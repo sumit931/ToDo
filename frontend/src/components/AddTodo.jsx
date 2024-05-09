@@ -10,7 +10,8 @@ function AddTodo({onUpdate}) {
         title:input1,
         description:input2
       };
-      const url = "http://localhost:3000/todo";
+      // const url = "http://localhost:3000/todo";
+      const url = "https://todo-5-c49x.onrender.com/todo";
       fetch(url,{
         method: 'POST',
         headers: {

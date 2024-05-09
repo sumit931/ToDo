@@ -5,7 +5,8 @@ function FetchTodo({shouldUpdate}) {
     const [count,setCount] = useState([]);
 
     useEffect(() => {
-        const url = "http://localhost:3000/todo";
+        // const url = "http://localhost:3000/todo";
+        const url = "https://todo-5-c49x.onrender.com/todo";
         fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -25,7 +26,7 @@ function FetchTodo({shouldUpdate}) {
     const removeTodo = async(idToRemove)=>{
         console.log(idToRemove);
         try {
-            await fetch(`http://localhost:3000/todo/${idToRemove}`, {
+            await fetch(`https://todo-5-c49x.onrender.com/todo/${idToRemove}`, {
                 method: 'DELETE',
             });
             setCount(count+1);
